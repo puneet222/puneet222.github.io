@@ -1,1 +1,161 @@
-hello hahahahaha :)
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Merry Christmas</title>
+   <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ruge+Boogie" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+ 
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/typed.js"></script>
+
+    <style type="text/css">
+
+      .element {
+        animation: pulse 5s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          background-color: #001F3F;
+        }
+        100% {
+          background-color: #FF4136;
+         }
+      }
+
+      body{
+        background-color: #3F51B5 ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #christ{
+        font-size: 10em;
+      }
+      #content{
+        position: relative; ;
+        top: -50% ;
+      }
+      #main-content{
+        z-index: 3;
+        box-shadow: 1em;
+        position: relative;
+        left: -50%;
+        /*width: 180em;*/
+        margin-top: 6em;
+        border-style: solid;
+        border-color: white ;
+        border-radius: 2em ;
+        align-items: center;
+        color: white;
+        padding: 3em;
+      }
+      #first{
+        font-size: 3em;
+        width: 16em;
+        font-family: 'Homemade Apple', cursive;
+      }
+      #mc{
+        position: relative;
+        left: 3%;
+        font-size: 7.2em;
+        font-family: 'Mountains of Christmas', cursive;
+      }
+      #greet{
+        position: relative;
+        left: 10%;
+        font-size: 6em;
+        width: 80%;
+        border-radius: 0.7em ;
+        background-color: #F44336;
+        color: white;
+        align-items: center;
+        text-align: center;
+        font-family: 'Parisienne', cursive;
+      }
+      #poem{
+        left: 50% ;
+        font-size: 4em;
+        font-family: 'Gloria Hallelujah', cursive;
+        text-align: center;
+      }
+      #canvas{
+        display: block ;
+      }
+      .shine{
+        background-color:#222 ;
+        background:-webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.7, #fff)); 
+        background-repeat:no-repeat;
+        -webkit-background-size: 100px;
+        color: white;
+        -webkit-background-clip: text;
+        -webkit-animation-name: shining;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-iteration-count: infinite;
+      }
+
+      @-webkit-keyframes shining{
+        0%
+          {
+          background-position: left top;
+          }
+        100%
+          {
+          background: right bottom;
+          }
+      }
+
+      #post-div{
+        margin: 1em;
+        padding: 1.2em;
+        background-color: #E91E63;
+        width: 16em;
+        position: relative;
+        left: 70%;
+        border-radius: 5em;
+        text-align: center;
+        font-family: 'Ruge Boogie', cursive;
+      }
+
+      #post{
+        font-size: 3em;
+      }
+    </style>
+    
+</head>
+
+<body>
+<canvas id="canvas">
+  
+  </canvas>
+    <div id="main-content">
+  <div id="first">wishing you a very ...</div>
+  <div id="mc"><b>Merry Christmas</b></div>
+  <br>
+    <div id="greet">Greetings</div>
+    <div id="poem">
+    <h2>The Gift of Love.</h2>
+    <h2>The Gift of Peace.</h2>
+    <h2>The Gift of Happiness.</h2>
+    <h2>May All These Be Yours</h2>
+    <h2>At Christmas</h2>
+    </div><br>
+    <div id="post-div">
+      <div id="post" class="shine">
+      By Puneet
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
