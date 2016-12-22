@@ -142,7 +142,7 @@ $(function(){
 																	callback : function(){
 																		$("#greet").addClass("foo") ;
 																		$("#post-div").addClass("bar") ;
-																		$("greet").addClass("weight") ;
+																		$("#greet").addClass("weight") ;
 																		$("#main-content").addClass("border") ;
 																	}
 																})
