@@ -101,7 +101,7 @@ $(function(){
 			strings:["<b>Happy Ch^500<b>","<b>Merry Christmas<b>"],
 			contentType: 'html',
 			showCursor : false,
-			backSpeed:200,
+			backSpeed:150,
 			typeSpeed: 250,
 			callback: function(){
 				$("#greet").typed({
@@ -113,29 +113,37 @@ $(function(){
 						$("#line1").typed({
 							strings : ["Whatever is beautiful."],
 							showCursor : false,
-							typeSpeed:200,
+							typeSpeed:150,
 							callback : function(){
 								$("#line2").typed({
 									strings:["Whatever is meaningful."],
 									showCursor : false,
-									typeSpeed:200,
+									typeSpeed:150,
 									callback : function(){
 										$("#line3").typed({
 											strings:["Whatever brings you happinessss."],
 											showCursor : false,
-											typeSpeed:200,
+											typeSpeed:150,
 											callback : function(){
 												$("#line4").typed({
 													strings : ["May it be yours this ^500season"],
 													showCursor : false,
-													typeSpeed : 200,
+													typeSpeed : 150,
 													callback : function(){
 														$("#line5").typed({
 															strings : ["and throughout the coming year."],
 															showCursor : false,
-															typeSpeed : 200,
+															typeSpeed : 150,
 															callback : function(){
-																alert("skj");
+																$("#post").typed({
+																	strings : ["From Puneet"] , 
+																	typeSpeed : 220,
+																	callback : function(){
+																		$("#greet").addClass("foo") ;
+																		$("#post-div").addClass("bar") ;
+																		$("#main-content").addClass("border") ;
+																	}
+																})
 															}
 														})
 													}
