@@ -85,6 +85,7 @@ setInterval(draw , 33) ;
 $(function(){
 	$("#first").typed({
 	strings:['wishing you a very...'],
+	showCursor : false,
 	typeSpeed : 120,
 	backSpeed: 1000,
     shuffle: true,
@@ -97,15 +98,54 @@ $(function(){
 
 	function mc(){
 		$("#mc").typed({
-			strings:["<b>Merry Christmas<b>"],
+			strings:["<b>Happy Ch^500<b>","<b>Merry Christmas<b>"],
 			contentType: 'html',
+			showCursor : false,
+			backSpeed:200,
 			typeSpeed: 250,
 			callback: function(){
 				$("#greet").typed({
 					strings:['Greetings'],
+					showCursor : false,
 					typeSpeed:240,
 					callback: function(){
-						$("#greet").addClass("foo");
+						// $("#greet").addClass("foo");
+						$("#line1").typed({
+							strings : ["Whatever is beautiful."],
+							showCursor : false,
+							typeSpeed:200,
+							callback : function(){
+								$("#line2").typed({
+									strings:["Whatever is meaningful."],
+									showCursor : false,
+									typeSpeed:200,
+									callback : function(){
+										$("#line3").typed({
+											strings:["Whatever brings you happinessss."],
+											showCursor : false,
+											typeSpeed:200,
+											callback : function(){
+												$("#line4").typed({
+													strings : ["May it be yours this ^500season"],
+													showCursor : false,
+													typeSpeed : 200,
+													callback : function(){
+														$("#line5").typed({
+															strings : ["and throughout the coming year."],
+															showCursor : false,
+															typeSpeed : 200,
+															callback : function(){
+																alert("skj");
+															}
+														})
+													}
+												})
+											}
+										})
+									}
+								})
+							}
+						})
 					}
 				})
 			}
