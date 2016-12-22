@@ -138,9 +138,11 @@ $(function(){
 																$("#post").typed({
 																	strings : ["From Puneet"] , 
 																	typeSpeed : 220,
+																	showCursor : false,
 																	callback : function(){
 																		$("#greet").addClass("foo") ;
 																		$("#post-div").addClass("bar") ;
+																		$("greet").addClass("weight") ;
 																		$("#main-content").addClass("border") ;
 																	}
 																})
