@@ -105,12 +105,13 @@ $(function(){
 			backSpeed:150,
 			typeSpeed: 250,
 			callback: function(){
+				$("body").addClass("col1") ;
 				$("#greet").typed({
 					strings:['Greetings'],
 					showCursor : false,
 					typeSpeed:240,
 					callback: function(){
-						// $("#greet").addClass("foo");
+						$("body").addClass("col2") ;
 						$("#line1").typed({
 							strings : ["Out with the old, "],
 							showCursor : false,
@@ -121,6 +122,7 @@ $(function(){
 									showCursor : false,
 									typeSpeed:150,
 									callback : function(){
+										$("body").addClass("col3") ;
 										$("#line3").typed({
 											strings:[" may you be happy "],
 											showCursor : false,
@@ -131,6 +133,7 @@ $(function(){
 													showCursor : false,
 													typeSpeed : 150,
 													callback : function(){
+														$("body").addClass("col4") ;
 														$("#line5").typed({
 															strings : ["Happy New Year!"],
 															showCursor : false,
