@@ -99,7 +99,7 @@ $(function(){
 
 	function mc(){
 		$("#mc").typed({
-			strings:["<b>Happy Ch^500<b>","<b>Merry Christmas<b>"],
+			strings:["Happy New Year"],
 			contentType: 'html',
 			showCursor : false,
 			backSpeed:150,
@@ -112,27 +112,27 @@ $(function(){
 					callback: function(){
 						// $("#greet").addClass("foo");
 						$("#line1").typed({
-							strings : ["Whatever is beautiful."],
+							strings : ["Out with the old, "],
 							showCursor : false,
 							typeSpeed:150,
 							callback : function(){
 								$("#line2").typed({
-									strings:["Whatever is meaningful."],
+									strings:["in with the new, "],
 									showCursor : false,
 									typeSpeed:150,
 									callback : function(){
 										$("#line3").typed({
-											strings:["Whatever brings you happinessss."],
+											strings:[" may you be happy "],
 											showCursor : false,
 											typeSpeed:150,
 											callback : function(){
 												$("#line4").typed({
-													strings : ["May it be yours this ^500season"],
+													strings : ["the whole year through."],
 													showCursor : false,
 													typeSpeed : 150,
 													callback : function(){
 														$("#line5").typed({
-															strings : ["and throughout the coming year."],
+															strings : ["Happy New Year!"],
 															showCursor : false,
 															typeSpeed : 150,
 															callback : function(){
