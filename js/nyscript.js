@@ -113,23 +113,23 @@ $(function(){
 					callback: function(){
 						$("body").addClass("col2") ;
 						$("#line1").typed({
-							strings : ["Out with the old, "],
+							strings : ["May your New Year be "],
 							showCursor : false,
 							typeSpeed:150,
 							callback : function(){
 								$("#line2").typed({
-									strings:["in with the new, "],
+									strings:["a New Year that brings "],
 									showCursor : false,
 									typeSpeed:150,
 									callback : function(){
 										$("body").addClass("col3") ;
 										$("#line3").typed({
-											strings:[" may you be happy "],
+											strings:["luck and prosperity, "],
 											showCursor : false,
 											typeSpeed:150,
 											callback : function(){
 												$("#line4").typed({
-													strings : ["the whole year through."],
+													strings : ["a New Year that brings happiness and joy. "],
 													showCursor : false,
 													typeSpeed : 150,
 													callback : function(){
