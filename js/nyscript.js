@@ -139,6 +139,7 @@ $(function(){
 															showCursor : false,
 															typeSpeed : 150,
 															callback : function(){
+																$("body").addClass("col5") ;
 																$("#post").typed({
 																	strings : ["From Puneet"] , 
 																	typeSpeed : 220,
