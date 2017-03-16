@@ -5,7 +5,9 @@
 		window.onload = function() {
 			// Animate loader off screen
 			// alert("haha") ;
-			$(".se-pre-con").fadeOut("slow");;
+			$(".se-pre-con").fadeOut("slow" , function(){
+				$("#heading").addClass("animated slideInUp") ;
+			});;
 		};
 	</script>
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -29,13 +31,18 @@
                 // playing the video
                 $('video').get(0).play();
             }
-		});
+				});
+				$('.scrollDown').click(function(){
+					$.fn.pagepiling.moveSectionDown();
+				});
     });
 </script>
 <body>
 	<!-- --------------------------------------------------------------------------------  loader division --------------------------------------------------------- -->
 	<div class="se-pre-con" style="background-color: #e74c3c">
-		<div class="clock"></div>
+		<div class="loader">
+			<span>{</span><span>}</span>
+		</div>
 	</div>
 	<!-- -------------------------  Resume button --------------------------- -->
 	<button class="buttonPink topRight"><i class="fa fa-download" aria-hidden="true"></i>  Resume</button>
@@ -49,7 +56,7 @@
 			<!-- -------------------------  basic info division ----------------------- -->
 			<div id="basic-info" class="container" style="width: 60%;">
 				<!-- -------  tinted video  ------- -->
-				<div class="fullscreen-bg">
+				<div class="fullscreen-bg video-responsive">
 					<video loop muted autoplay poster="images/hny.png" class="fullscreen-bg__video">
 						<source src="video/out-5.ogv" type="video/ogg">
 					</video>
@@ -57,18 +64,30 @@
 					</div>
 				</div>
 				<!-- -------- heading   ------- -->
-				<div class="roboto">
+				<div class="">
 					<!-- --------   content   --------- -->
-					<p class="text-center" style="color : white; font-size: 6.5em; font-weight:lighter;">puneet222.github.io</p>
+					<div id="heading" class="animated slideInUp">
+						<p class="text-center" style="color : white; font-size: 7vw; font-weight:lighter; margin: 0px;">puneet222.github.io</p>
+						<p class="text-right" style="color: white; font-size: 1.5em; font-weight: 100">( Full Stack Developer )</p>
+					</div>
 					<br>
-					<h4 class="text-center" style="color : white; font-size: 20px; font-weight:lighter; letter-spacing: 2px;">Hello! My name is Puneet Aggarwal.
+					<h4 class="text-center animated zoomIn" style="color : white; font-size: 20px; font-weight:300; letter-spacing: 2px;">Hello! My name is Puneet Aggarwal.
 						Currently I'm pursuing B.E. (Computer Science) from PEC Unversity of Technology, Chandigarh. I'm very enthusiastic about web development, and always very
 						interested to learn about latest technologies. I also like to read blogs and sometimes inmy free time I use to do sketching, painting. I'm also a
 						TV Series addict and love to read novels.</h4>
 				</div>
+				<div class="text-center" style="position: fixed ; top: 90%; text-align: center; margin-left: 28%;">
+					<a class="scrollDown" style="cursor: pointer"><span></span></a>
+				</div>
 			</div>
 		</div>
-		<div class="section">
+		<div class="section" style="background-color: #004D40">
+
+		</div>
+		<div class="section" style="background-color: #F44336">
+
+		</div>
+		<div class="section" style="background-color: #3F51B5">
 
 		</div>
 	</div>
