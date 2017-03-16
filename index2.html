@@ -15,6 +15,9 @@
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="bower_components/pagePiling.js/jquery.pagepiling.min.js"></script>
+	<script src="frameworks/particleground-master/jquery.particleground.js"></script>				<!-- particle ground js framework -->
+	<script src="frameworks/particleground-master/demo/js/demo.js"></script>  								<!-- particle ground js framework's demo js -->
+	<script src="js/portfolio.js"></script>
 	<title>Puneet Aggarwal</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
@@ -24,21 +27,9 @@
 	<link href="bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="bower_components/pagePiling.js/jquery.pagepiling.css" rel="stylesheet">
   <link href="bower_components/animate.css/animate.css" rel="stylesheet" />
+	<!-- <link href="frameworks/particleground-master/demo/css/style.css" rel="stylesheet">		<!-- particle ground js framework's demo css -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#pagepiling').pagepiling({
-            afterRender : function () {
-                // playing the video
-                $('video').get(0).play();
-            }
-				});
-				$('.scrollDown').click(function(){
-					$.fn.pagepiling.moveSectionDown();
-				});
-    });
-</script>
 <body>
 	<!-- --------------------------------------------------------------------------------  loader division --------------------------------------------------------- -->
 	<div class="se-pre-con" style="background-color: #e74c3c">
@@ -54,7 +45,7 @@
 	</div>
 
 	<div id="pagepiling">
-		<div class="section">
+		<div class="section" style="background-color:#424242">
 			<!-- -------------------------  basic info division ----------------------- -->
 			<div id="basic-info" class="container" style="width: 60%;">
 				<!-- -------  tinted video  ------- -->
@@ -83,8 +74,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="section" style="background-color: #004D40">
-
+		<div class="section" style="background-color: #009688" id="skills">
+			<div id="particles" style="position: relative;">
+				<div id="intro">
+					<h1>Particleground</h1>
+					<!-- <p>A JavaScript plugin for snazzy background particle systems</p> -->
+				</div>
+			</div>
 		</div>
 		<div class="section" style="background-color: #F44336">
 
