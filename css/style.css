@@ -128,8 +128,8 @@
 }
 .scrollDown ::before {
 	position: absolute;
-	/*top: 10px;
-	left: 50%;*/
+	top: 10px;
+	left: 50%;
 	content: '';
 	width: 6px;
 	height: 6px;

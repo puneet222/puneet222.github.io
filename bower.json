@@ -15,6 +15,7 @@
   "dependencies": {
     "bootstrap": "^3.3.5",
     "animate.css": "^3.5.2",
-    "components-font-awesome": "^4.7.0"
+    "components-font-awesome": "^4.7.0",
+    "pagePiling.js": "pagepiling.js#^1.5.4"
   }
 }
