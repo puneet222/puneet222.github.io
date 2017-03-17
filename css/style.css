@@ -173,6 +173,25 @@
 	}
 }
 
+.sliding-middle-out {
+	display: inline-block;
+	position: relative;
+	padding-bottom: 3px;
+}
+.sliding-middle-out:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0%;
+	background: white;
+	transition: width .5s ease, background-color .5s ease;
+}
+.sliding-middle-out:hover:after {
+	width: 100%;
+	background: white;
+}
+
 /* ---------------------  { } loader  --------------------*/
 
 .loader {
@@ -182,6 +201,7 @@
 	font-size: 30vh;
 	opacity: 0.8;
 	text-align: center;
+	margin-top: 10%;
 }
 .loader span {
 	display: inline-block;
