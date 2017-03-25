@@ -17,10 +17,26 @@
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="bower_components/pagePiling.js/jquery.pagepiling.min.js"></script>
+	<srcipt src="bower_components/progressbar.js/dist/progressbar.js"></srcipt>
 	<script src="frameworks/particleground-master/jquery.particleground.js"></script>				<!-- particle ground js framework -->
 	<script src="frameworks/particleground-master/demo/js/demo.js"></script>  								<!-- particle ground js framework's demo js -->
+
+
+<!-- -------------------------------   angular components   --------------------------- -->
+	<script src="bower_components/angular/angular.js"></script>
+  	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+<!-- --------------------------------  MY scripts   ----------------------------------   -->
+	<script src="js/adminApp.js"></script>
 	<script src="js/portfolio.js"></script>
+	<script src="js/tempController.js"></script>
+
+
 	<title>Puneet Aggarwal</title>
+
+	<!-- -------------------------------   CSS frameworks   ------------------------------ -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
@@ -32,7 +48,7 @@
 	<!-- <link href="frameworks/particleground-master/demo/css/style.css" rel="stylesheet">		<!-- particle ground js framework's demo css -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body ng-app="portfolio">
 	<!-- --------------------------------------------------------------------------------  loader division --------------------------------------------------------- -->
 	<div class="se-pre-con" style="background-color: #e74c3c">
 		<div class="loader">
@@ -79,8 +95,15 @@
 		<div class="section" style="background-color: #009688" id="skills">
 			<div id="particles" style="position: relative;">
 				<div id="intro" class="text-center">
-					<div >
+					<div>
 						<h1 id="" class="skills" style="position: fixed ; top: 3% ; left: 45% ;color: white ; font-size: 3.6vw; font-weight: 300;"><b>SKILLS</b></h1>
+						<div class="row">
+							<div class="col-md-4">
+								<div id="container" style="height: 500px ; width: 500px; background-color: pink;">
+									<a ui-sref="temporary">click me</a>
+								</div>
+							</div>
+						</div>
 					</div>
 					<!-- <p>A JavaScript plugin for snazzy background particle systems</p> -->
 				</div>

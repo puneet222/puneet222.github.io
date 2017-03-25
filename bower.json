@@ -14,8 +14,13 @@
   ],
   "dependencies": {
     "bootstrap": "^3.3.5",
+    "angular": "1.5.8",
+    "angular-animate": "1.5.8",
     "animate.css": "^3.5.2",
+    "angular-route": "1.5.8",
+    "angular-ui-router": "0.2.18",
     "components-font-awesome": "^4.7.0",
-    "pagePiling.js": "pagepiling.js#^1.5.4"
+    "pagePiling.js": "pagepiling.js#^1.5.4",
+    "progressbar.js": "^1.0.1"
   }
 }

@@ -25,10 +25,10 @@
     min-width: 100%;
   	min-height: 100%;
     overflow: hidden;
-    z-index: -100;
+    z-index: -1;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-size: cover;
 }
 
@@ -226,3 +226,14 @@
 		opacity: 0.5;
 	}
 }
+
+#container {
+	width: 100px;
+	height: 100px;
+}
+
+#container > svg {
+	width: 100%;
+	display: block;
+}
+
