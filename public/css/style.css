@@ -1,6 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300);
 #pagepiling {
-  font-family: Roboto;
+  	font-family: Roboto;
+}
+
+.roboto{
+	font-family: Roboto;
 }
 
 /*loader*/
@@ -28,8 +32,9 @@
     z-index: -1;
     background-position: center center;
     background-repeat: no-repeat;
+	transform: translate(-50%, -50%);
     /*background-attachment: fixed;*/
-    background-size: cover;
+    /*background-size: cover;*/
 }
 
 .tint {
@@ -235,5 +240,17 @@
 #container > svg {
 	width: 100%;
 	display: block;
+}
+
+.topCenter {
+	position: absolute;
+	margin: 0 auto;
+	top: 1em;
+	left: 46%;
+}
+@media (max-width: 747px){
+	.topCenter{
+		left : 36%;
+	}
 }
 
