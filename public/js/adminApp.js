@@ -6,12 +6,12 @@ var portfolio = angular.module('portfolio' , ['ngAnimate',
   $stateProvider
   .state('home' , {
     url : '/',
-      templateUrl: 'index2.html',
-      controller : 'portfolioController.js'
+      templateUrl: '../views/portfolio.html',
+      controller : 'portfolioController'
   })
   .state('temporary' , {
-    url: 'temp',
-    templateUrl : 'temporary.html',
+    url: '/temp',
+    templateUrl : '../views/temporary.html',
     controller : 'tempController'
   })
-})
+});
