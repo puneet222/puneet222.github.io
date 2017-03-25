@@ -1,6 +1,17 @@
 angular.module('portfolio').controller('portfolioController' , function ($scope) {
-    $(document).ready(function() {
 
+    $scope.init = function () {
+        initializePagepiling() ;  // --------------  initializing pagePiling
+
+        $("#pp-nav").hide() ;   // -----------   removing the tool tip (dots) of pagePiling
+
+        $('.scrollDown').click(function(){      // ------------   function to scroll down the section of pagePiling
+            $.fn.pagepiling.moveSectionDown();
+        });
+
+    };
+
+    function initializePagepiling() {
         $('#pagepiling').pagepiling({
             scrollingSpeed: 500,
             afterRender : function () {
@@ -18,10 +29,7 @@ angular.module('portfolio').controller('portfolioController' , function ($scope)
                 }
             }
         });
+    }
 
 
-        $('.scrollDown').click(function(){
-            $.fn.pagepiling.moveSectionDown();
-        });
-    });
 });
