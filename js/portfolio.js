@@ -22,11 +22,4 @@ $(document).ready(function() {
     $('.scrollDown').click(function(){
       $.fn.pagepiling.moveSectionDown();
     });
-    function haha(){
-        alert("ko") ;
-    }
-    $("#but").click(function () {
-        // alert("aa") ;
-        $("#skills").addClass("animated slideInUp") ;
-    })
 });
