@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html  ng-app="portfolio">
 <head>
-	<meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript">
-		window.onload = function() {
-			// Animate loader off screen
-			$(".se-pre-con").fadeOut("slow" , function(){
-				$("#heading").addClass("animated slideInUp" , 2500) ;
-				$("#headName").addClass("sliding-middle-out") ;
-			});
-		};
+        window.onload = function() {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow" , function(){
+                $("#heading").addClass("animated slideInUp" , 2500) ;
+                $("#headName").addClass("sliding-middle-out") ;
+            });
 
+
+
+            $('#pagepiling').pagepiling({
+                scrollingSpeed: 500,
+                afterRender : function () {
+                    // playing the video
+                    // $('video').get(0).play();
+                },
+                onLeave: function(index, nextIndex, direction) {
+                    if(nextIndex == 2){
+                        $("#skills").addClass("animated fadeInUpBig" , 1000) ;
+                        $("#skills").addClass("sliding-middle-out" , 1000) ;
+
+                        $('.progress .progress-bar').progressbar({
+                            transition_delay: 200
+                        });
+                    }
+                }
+            });
+
+            $('.scrollDown').click(function(){      // ------------   function to scroll down the section of pagePiling
+                $.fn.pagepiling.moveSectionDown();
+            });
+
+            $("#pp-nav").hide() ;   // -----------   removing the tool tip (dots) of pagePiling
+        };
 	</script>
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="bower_components/pagePiling.js/jquery.pagepiling.min.js"></script>
-	<srcipt src="bower_components/progressbar.js/dist/progressbar.js"></srcipt>
-
-
-<!-- -------------------------------   angular components   --------------------------- -->
-	<script src="bower_components/angular/angular.js"></script>
-  	<script src="bower_components/angular-animate/angular-animate.js"></script>
-	<script src="bower_components/angular-route/angular-route.min.js"></script>
-	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-
-<!-- --------------------------------  MY scripts   ----------------------------------   -->
-	<script src="js/adminApp.js"></script>
-	<script src="js/portfolioController.js"></script>
-	<script src="js/tempController.js"></script>
-
-
-	<title>Puneet Aggarwal</title>
-
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- -------------------------------   CSS frameworks   ------------------------------ -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../frameworks/jquery-asProgress-master/dist/css/asProgress.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link href="bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="bower_components/pagePiling.js/jquery.pagepiling.css" rel="stylesheet">
-  	<link href="bower_components/animate.css/animate.css" rel="stylesheet" />
-  	<link rel="stylesheet" href="css/style.css">
+	<link href="bower_components/animate.css/animate.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- -------------------------------   angular components   --------------------------- -->
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+
+	<title>Puneet Aggarwal</title>
+
 </head>
 <body>
 	<!-- --------------------------------------------------------------------------------  loader division --------------------------------------------------------- -->
@@ -52,6 +69,22 @@
 		</div>
 	</div>
 	<div ui-view></div>
+
+
+
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="bower_components/pagePiling.js/jquery.pagepiling.min.js"></script>
+	<srcipt src="bower_components/progressbar.js/dist/progressbar.js"></srcipt>
+	<script src="../../bower_components/bootstrap-progressbar/bootstrap-progressbar.js"></script>
+	<script src="../frameworks/jquery-asProgress-master/dist/jquery-asProgress.min.js"></script>
+
+
+	<!-- --------------------------------  MY scripts   ----------------------------------   -->
+	<script src="js/adminApp.js"></script>
+	<script src="js/portfolioController.js"></script>
+	<script src="js/tempController.js"></script>
 
 </body>
 </html>

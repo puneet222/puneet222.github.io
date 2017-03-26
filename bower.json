@@ -21,6 +21,7 @@
     "angular-ui-router": "0.2.18",
     "components-font-awesome": "^4.7.0",
     "pagePiling.js": "pagepiling.js#^1.5.4",
-    "progressbar.js": "^1.0.1"
+    "progressbar.js": "^1.0.1",
+    "bootstrap-progressbar": "^0.9.0"
   }
 }

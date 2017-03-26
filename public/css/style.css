@@ -254,3 +254,26 @@
 	}
 }
 
+.six-sec-ease-in-out {
+	-webkit-transition: width 3s ease-in-out;
+	-moz-transition: width 3s ease-in-out;
+	-ms-transition: width 3s ease-in-out;
+	-o-transition: width 3s ease-in-out;
+	transition: width 3s ease-in-out;
+}
+
+/*-----  for progress bar  ------*/
+
+.progressBarBackground {
+	background-color: transparent;
+	height: 1.5vh;
+	border-radius: 6px;
+	border: 0px;
+}
+
+.progressBarForeGround {
+	height: 1.5vh;
+	background-color: orangered;
+	border: 0px;
+}
+
