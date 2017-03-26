@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  ng-app="portfolio">
+<html  ng-app="portfolio" class="no-js">
 <head>
 	<script type="text/javascript">
         window.onload = function() {
@@ -8,32 +8,6 @@
                 $("#heading").addClass("animated slideInUp" , 2500) ;
                 $("#headName").addClass("sliding-middle-out") ;
             });
-
-
-
-            $('#pagepiling').pagepiling({
-                scrollingSpeed: 500,
-                afterRender : function () {
-                    // playing the video
-                    // $('video').get(0).play();
-                },
-                onLeave: function(index, nextIndex, direction) {
-                    if(nextIndex == 2){
-                        $("#skills").addClass("animated fadeInUpBig" , 1000) ;
-                        $("#skills").addClass("sliding-middle-out" , 1000) ;
-
-                        $('.progress .progress-bar').progressbar({
-                            transition_delay: 200
-                        });
-                    }
-                }
-            });
-
-            $('.scrollDown').click(function(){      // ------------   function to scroll down the section of pagePiling
-                $.fn.pagepiling.moveSectionDown();
-            });
-
-            $("#pp-nav").hide() ;   // -----------   removing the tool tip (dots) of pagePiling
         };
 	</script>
 	<meta charset="utf-8">
@@ -44,10 +18,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="../frameworks/jquery-asProgress-master/dist/css/asProgress.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link href="bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-	<link href="bower_components/pagePiling.js/jquery.pagepiling.css" rel="stylesheet">
 	<link href="bower_components/animate.css/animate.css" rel="stylesheet" />
 	<link rel="stylesheet" href="css/style.css">
 
@@ -57,34 +29,31 @@
 	<script src="bower_components/angular-route/angular-route.min.js"></script>
 	<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-
-	<title>Puneet Aggarwal</title>
-
-</head>
-<body>
-	<!-- --------------------------------------------------------------------------------  loader division --------------------------------------------------------- -->
-	<div class="se-pre-con" style="background-color: #e74c3c">
-		<div class="loader">
-			<span>{</span><span>}</span>
-		</div>
-	</div>
-	<div ui-view></div>
-
-
-
+	<!-- -------------------------------  some important scripts  ------------------------- -->
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="bower_components/pagePiling.js/jquery.pagepiling.min.js"></script>
 	<srcipt src="bower_components/progressbar.js/dist/progressbar.js"></srcipt>
 	<script src="../../bower_components/bootstrap-progressbar/bootstrap-progressbar.js"></script>
-	<script src="../frameworks/jquery-asProgress-master/dist/jquery-asProgress.min.js"></script>
 
 
 	<!-- --------------------------------  MY scripts   ----------------------------------   -->
 	<script src="js/adminApp.js"></script>
 	<script src="js/portfolioController.js"></script>
 	<script src="js/tempController.js"></script>
+
+
+	<title>Puneet Aggarwal</title>
+
+</head>
+<body data-hijacking="on" data-animation="parallax">
+	<!-- --------------------------------------------------------------------------------  loader division --------------------------------------------------------- -->
+	<div class="se-pre-con" style="background-color: #e74c3c">
+		<div class="loader">
+			<span>{</span><span>}</span>
+		</div>
+	</div>
+	<div ui-view id="main-div"></div>
 
 </body>
 </html>
