@@ -253,12 +253,12 @@
 }
 
 .progress {
-	height: 35px;
+	height: 3.5vh;
 
 }
 .progress .skill {
-	font: normal 12px "Open Sans Web";
-	line-height: 35px;
+	font: normal 2vh "Roboto";
+	line-height: 3.5vh;
 	padding: 0;
 	margin: 0 0 0 20px;
 	text-transform: uppercase;
