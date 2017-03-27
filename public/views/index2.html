@@ -5,9 +5,27 @@
         window.onload = function() {
             // Animate loader off screen
             $(".se-pre-con").fadeOut("slow" , function(){
-                $("#heading").addClass("animated slideInUp" , 2500) ;
+                $("#heading").addClass("animated slideInUp text-center" , 2500) ;
                 $("#headName").addClass("sliding-middle-out") ;
             });
+            $('#fullpage').fullpage({
+                onLeave: function(index, nextIndex, direction){
+                    var leavingSection = $(this);
+					console.log(leavingSection) ;
+                    //after leaving section 2
+                    if(nextIndex == 2){
+                        $('.progress .progress-bar').css("width",
+                            function() {
+                                return $(this).attr("aria-valuenow") + "%";
+                            }
+                        )
+                    }
+
+                    if(nextIndex == 2){
+                        alert("Going to section 2!");
+                    }
+                }
+			});
         };
 	</script>
 	<meta charset="utf-8">
@@ -21,6 +39,7 @@
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link href="bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="bower_components/animate.css/animate.css" rel="stylesheet" />
+	<link href="../../bower_components/fullpage.js/jquery.fullPage.css" rel="stylesheet" />
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- -------------------------------   angular components   --------------------------- -->
@@ -35,6 +54,8 @@
 	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<srcipt src="bower_components/progressbar.js/dist/progressbar.js"></srcipt>
 	<script src="../../bower_components/bootstrap-progressbar/bootstrap-progressbar.js"></script>
+	<script src="../../bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
+	<script src="../../bower_components/fullpage.js/jquery.fullPage.min.js"></script>
 
 
 	<!-- --------------------------------  MY scripts   ----------------------------------   -->
@@ -46,14 +67,14 @@
 	<title>Puneet Aggarwal</title>
 
 </head>
-<body data-hijacking="on" data-animation="parallax">
+<body>
 	<!-- --------------------------------------------------------------------------------  loader division --------------------------------------------------------- -->
 	<div class="se-pre-con" style="background-color: #e74c3c">
 		<div class="loader">
 			<span>{</span><span>}</span>
 		</div>
 	</div>
-	<div ui-view id="main-div"></div>
+	<div ui-view></div>
 
 </body>
 </html>

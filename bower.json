@@ -20,6 +20,7 @@
     "angular-route": "1.5.8",
     "angular-ui-router": "0.2.18",
     "components-font-awesome": "^4.7.0",
-    "bootstrap-progressbar": "^0.9.0"
+    "bootstrap-progressbar": "^0.9.0",
+    "fullpage.js": "^2.9.4"
   }
 }
