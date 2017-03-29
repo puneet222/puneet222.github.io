@@ -221,11 +221,11 @@
 	position: absolute;
 	margin: 0 auto;
 	top: 1em;
-	left: 46%;
+	left: 35%;
 }
 @media (max-width: 747px){
 	.topCenter{
-		left : 36%;
+		left : 29%;
 	}
 }
 
@@ -253,12 +253,12 @@
 }
 
 .progress {
-	height: 3.5vh;
-
+	height: 1.5vh;
+	background-color: gray;
 }
 .progress .skill {
 	font: normal 2vh "Roboto";
-	line-height: 3.5vh;
+	line-height: 1.5vh;
 	padding: 0;
 	margin: 0 0 0 20px;
 	text-transform: uppercase;
@@ -274,3 +274,89 @@
 	transition-duration: 3s;
 }
 
+@keyframes move-twink-back {
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+	from {background-position:0 0;}
+	to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+	from {background-position:0 0;}
+	to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+	from {background-position:0 0;}
+	to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+	from {background-position: 0;}
+	to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+	height:100%;
+	display:block;
+}
+
+.stars {
+	background:darkslategray url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+	z-index:0;
+}
+
+.twinkling{
+	background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+	z-index:0;
+
+	-moz-animation:move-twink-back 200s linear infinite;
+	-ms-animation:move-twink-back 200s linear infinite;
+	-o-animation:move-twink-back 200s linear infinite;
+	-webkit-animation:move-twink-back 200s linear infinite;
+	animation:move-twink-back 200s linear infinite;
+}
+
+@font-face {
+	font-family: starWars;
+	src: url("../fonts/STARWARS.TTF");
+}
+
+#superpower{
+	font-family: starWars;
+}
+
+#skill-background{
+	background: #0d1115;
+	background: -moz-linear-gradient(top,  #0d1115 0%, #19232c 100%);
+	background: -webkit-linear-gradient(top,  #0d1115 0%,#19232c 100%);
+	background: linear-gradient(to bottom,  #0d1115 0%,#19232c 100%);
+	margin:0;
+	padding:0;
+}
+
+#skills{
+	position: absolute;
+	bottom: 41%;
+	background-color: transparent;
+	width: 100%;
+	padding: 5%;
+}
