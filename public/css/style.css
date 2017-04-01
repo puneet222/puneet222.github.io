@@ -154,6 +154,7 @@
 }
 
 .sliding-middle-out {
+	text-align: center;
 	display: inline-block;
 	position: relative;
 	padding-bottom: 3px;
@@ -253,12 +254,12 @@
 }
 
 .progress {
-	height: 2.5vh;
+	height: 0.8vh;
 	background-color: gray;
 }
 .progress .skill {
-	font: normal 2vh "Roboto";
-	line-height: 2.5vh;
+	font: normal 0.8vh "Roboto";
+	line-height: 0.8vh;
 	padding: 0;
 	margin: 0 0 0 20px;
 	text-transform: uppercase;
