@@ -21,7 +21,7 @@ angular.module('portfolio').controller('portfolioController' , function ($scope)
           "deep-purple" : "#673ab7",
           indigo : "#3f51b5",
           blue : "#2196f3",
-          "light-blue" : "#03a9f4",
+          "lightBlue" : "#03a9f4",
           cyan : "#00bcd4",
           teal : "#009688",
           green : "#4caf50",
@@ -33,8 +33,154 @@ angular.module('portfolio').controller('portfolioController' , function ($scope)
           "deepOrange" : "#ff5722",
           brown : "#795548",
           grey : "#9e9e9e",
-          "blue-grey" : "#607d8b"
+          "blueGrey" : "#607d8b"
         };
+
+
+
+
+
+
+
+
+        $scope.skillsMetadata = [
+            {
+                "skill" : "HTML",
+                "knowledge" : 85,
+                "color" : $scope.skillsColors.red,
+                "size" : 6,
+                "image" : "../images/logo/html5.png"
+            },
+            {
+                "skill" : "CSS",
+                "knowledge" : 68,
+                "color" : $scope.skillsColors.blue,
+                "size" : 6,
+                "image" : "../images/logo/css.png"
+            },
+            {
+                "skill" : "JAVASCRIPT",
+                "knowledge" : 88,
+                "color" : $scope.skillsColors.amber,
+                "size" : 6,
+                "image" : "../images/logo/javascript.png"
+            },
+            {
+                "skill" : "C++",
+                "knowledge" : 75,
+                "color" : $scope.skillsColors.indigo,
+                "size" : 6,
+                "image" : "../images/logo/cpp.png"
+            },
+            {
+                "skill" : "C",
+                "knowledge" : 88,
+                "color" : $scope.skillsColors.blueGrey,
+                "size" : 6,
+                "image" : "../images/logo/c.png"
+            },
+            {
+                "skill" : "JAVA",
+                "knowledge" : 65,
+                "color" : $scope.skillsColors.deepOrange,
+                "size" : 6,
+                "image" : "../images/logo/java.png"
+            },
+            {
+                "skill" : "AJAX",
+                "knowledge" : 80,
+                "color" : $scope.skillsColors.blue,
+                "size" : 6,
+                "image" : "../images/logo/ajax.png"
+            },
+            {
+                "skill" : "MONGODB",
+                "knowledge" : 85,
+                "color" : $scope.skillsColors.green,
+                "size" : 6,
+                "image" : "../images/logo/mongo.png"
+            },
+            {
+                "skill" : "SQL",
+                "knowledge" : 78,
+                "color" : $scope.skillsColors.orange,
+                "size" : 6,
+                "image" : "../images/logo/mysql.png"
+            },
+            {
+                "skill" : "GIT",
+                "knowledge" : 75,
+                "color" : $scope.skillsColors.red,
+                "size" : 6,
+                "image" : "../images/logo/git.png"
+            },
+            {
+                "skill" : "BOOTSTRAP",
+                "knowledge" : 90,
+                "color" : $scope.skillsColors.purple,
+                "size" : 6,
+                "image" : "../images/logo/bootstrap.png"
+            },
+            {
+                "skill" : "ANGULAR.JS",
+                "knowledge" : 85,
+                "color" : $scope.skillsColors.red,
+                "size" : 6,
+                "image" : "../images/logo/angular.png"
+            },
+            {
+                "skill" : "NODE.JS",
+                "knowledge" : 82,
+                "color" : $scope.skillsColors.green,
+                "size" : 6,
+                "image" : "../images/logo/node.png"
+            },
+            {
+                "skill" : "JQUERY",
+                "knowledge" : 85,
+                "color" : $scope.skillsColors.lightBlue,
+                "size" : 6,
+                "image" : "../images/logo/jquery.png"
+            },
+            {
+                "skill" : "PYTHON",
+                "knowledge" : 65,
+                "color" : $scope.skillsColors.yellow,
+                "size" : 6,
+                "image" : "../images/logo/python.png"
+            },
+            {
+                "skill" : "KONG",
+                "knowledge" : 85,
+                "color" : $scope.skillsColors.indigo,
+                "size" : 6,
+                "image" : "../images/logo/kong.png"
+            },
+
+            {
+                "skill" : "R",
+                "knowledge" : 65,
+                "color" : $scope.skillsColors.blue,
+                "size" : 6,
+                "image" : "../images/logo/r.png"
+            },
+            {
+                "skill" : "HTML",
+                "knowledge" : 85,
+                "color" : $scope.skillsColors.blue,
+                "size" : 6,
+                "image" : "../images/logo/html5.png"
+            },
+            {
+                "skill" : "HTML",
+                "knowledge" : 85,
+                "color" : $scope.skillsColors.blue,
+                "size" : 6,
+                "image" : "../images/logo/html5.png"
+            }
+        ];
+
+        console.log($scope.skillsMetadata) ;
 
         newStar();
         setInterval(starLight, 10);

@@ -28,7 +28,13 @@
             <!-- -------------------------  basic info division   [ =====   LARGE DEVICES  ===== ]----------------------- -->
             <div id="basic-info" class="container hidden-sm hidden-xs">
                  <!-- -------------  tinted video  ------------- -->
-
+                <div class="fullscreen-bg video-responsive">
+                    <video loop muted autoplay poster="../images/hny.png" class="fullscreen-bg__video">
+                        <source data-src="../video/out-5.ogv" type="video/ogg">
+                    </video>
+                    <div class="tint">
+                    </div>
+                </div>
                  <!------------------ heading   ------------- -->
                 <div class="">
                     <!-- --------   content   --------- -->
@@ -52,7 +58,7 @@
                 <!-- -------  tinted video  ------- -->
                 <!--<div class="fullscreen-bg video-responsive">-->
                     <!--<video loop muted autoplay poster="../images/hny.png" class="fullscreen-bg__video">-->
-                        <!--<source src="../video/out-5.ogv" type="video/ogg">-->
+                        <!--<source data-src="../video/out-5.ogv" type="video/ogg">-->
                     <!--</video>-->
                     <!--<div class="tint">-->
                     <!--</div>-->
@@ -77,212 +83,40 @@
         </div>
         <!------------------------------------------   SUPER POWER SECTION   ------------------------------------------->
         <div class="section" id="superpower">
-            <h5 class="text-center sliding-middle-out roboto" style="color: white; font-size: 6vh; font-weight: 700; font-family: 'Bungee Outline', cursive ; z-index: 10; position: absolute">Superpowers</h5>
+            <h5 class="text-center sliding-middle-out roboto" style="color: white; font-size: 6vh; font-family: 'Share Tech Mono', cursive ; z-index: 10; position: absolute">SUPERPOWERS</h5>
 
 
-            <div id="skill-background">
+            <div id="skill-background" class="hidden-sm hidden-xs">
                 <canvas id="sky"></canvas>
-            </div>
-
-            <div class="row hidden-sm hidden-xs" id="skills">
-                <div class="col-md-2">
-                    <!-- Skill Bars -->
-                    <div class="super text-center">
-                        <div style="padding-bottom: 5px;">
-                            <img src="../images/logo/html5.png" style="height: 10vh; height: 5vw;" />
-                        </div>
-                        <div class="progress skill-bar" >
-                            <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
-                            <div class="progress-bar" style="background-color: #ff5722" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="row" id="skills">
+                    <div class="col-lg-2 col-md-2" ng-repeat="skills in skillsMetadata">
+                        <!-- Skill Bars -->
+                        <div class="super text-center">
+                            <div style="padding-bottom: 5px;">
+                                <img src='{{ skills.image }}' style="height: 10vh; height: 5vw;" />
                             </div>
-                        </div>
-                        <div class="skill-name">
-                            <h5 class="roboto">HTML</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <!-- Skill Bars -->
-                    <div class="super text-center">
-                        <div style="padding-bottom: 5px;">
-                            <img src="../images/logo/html5.png" style="height: 10vh; height: 5vw;" />
-                        </div>
-                        <div class="progress skill-bar" >
-                            <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
-                            <div class="progress-bar" style="background-color: #ff5722" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress skill-bar" style=" margin-bottom: 0;">
+                                <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
+                                <div class="progress-bar" style="background-color: {{ skills.color }} ;" role="progressbar" aria-valuenow='{{ skills.knowledge }}' aria-valuemin="0" aria-valuemax="100">
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-name">
-                            <h5 class="roboto">HTML</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <!-- Skill Bars -->
-                    <div class="super text-center">
-                        <div style="padding-bottom: 5px;">
-                            <img src="../images/logo/css31600.png" style="height: 10vh; height: 5vw;" />
-                        </div>
-                        <div class="progress skill-bar" >
-                            <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
-                            <div class="progress-bar" style="background-color: #2196f3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                            <div class="skill-name">
+                                <h5 class="roboto" style="color:white">{{ skills.skill }}</h5>
                             </div>
-                        </div>
-                        <div class="skill-name">
-                            <h5 class="roboto">HTML</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <!-- Skill Bars -->
-                    <div class="super text-center">
-                        <div style="padding-bottom: 5px;">
-                            <img src="../images/logo/html5.png" style="height: 10vh; height: 5vw;" />
-                        </div>
-                        <div class="progress skill-bar" >
-                            <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
-                            <div class="progress-bar" style="background-color: #ff5722" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                        <div class="skill-name">
-                            <h5 class="roboto">HTML</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <!-- Skill Bars -->
-                    <div class="super text-center">
-                        <div style="padding-bottom: 5px;">
-                            <img src="../images/logo/html5.png" style="height: 10vh; height: 5vw;" />
-                        </div>
-                        <div class="progress skill-bar" >
-                            <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
-                            <div class="progress-bar" style="background-color: #ff5722" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                        <div class="skill-name">
-                            <h5 class="roboto">HTML</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <!-- Skill Bars -->
-                    <div class="super text-center">
-                        <div style="padding-bottom: 5px;">
-                            <img src="../images/logo/css31600.png" style="height: 10vh; height: 5vw;" />
-                        </div>
-                        <div class="progress skill-bar" >
-                            <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
-                            <div class="progress-bar" style="background-color: #2196f3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                        <div class="skill-name">
-                            <h5 class="roboto">HTML</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <!-- Skill Bars -->
-                    <div class="super text-center">
-                        <div style="padding-bottom: 5px;">
-                            <img src="../images/logo/html5.png" style="height: 10vh; height: 5vw;" />
-                        </div>
-                        <div class="progress skill-bar" >
-                            <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
-                            <div class="progress-bar" style="background-color: #ff5722" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                        <div class="skill-name">
-                            <h5 class="roboto">HTML</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <!-- Skill Bars -->
-                    <div class="super text-center">
-                        <div style="padding-bottom: 5px;">
-                            <img src="../images/logo/html5.png" style="height: 10vh; height: 5vw;" />
-                        </div>
-                        <div class="progress skill-bar" >
-                            <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
-                            <div class="progress-bar" style="background-color: #ff5722" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                        <div class="skill-name">
-                            <h5 class="roboto">HTML</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <!-- Skill Bars -->
-                    <div class="super text-center">
-                        <div style="padding-bottom: 5px;">
-                            <img src="../images/logo/css31600.png" style="height: 10vh; height: 5vw;" />
-                        </div>
-                        <div class="progress skill-bar" >
-                            <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
-                            <div class="progress-bar" style="background-color: #2196f3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                        <div class="skill-name">
-                            <h5 class="roboto">HTML</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <!-- Skill Bars -->
-                    <div class="super text-center">
-                        <div style="padding-bottom: 5px;">
-                            <img src="../images/logo/html5.png" style="height: 10vh; height: 5vw;" />
-                        </div>
-                        <div class="progress skill-bar" >
-                            <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
-                            <div class="progress-bar" style="background-color: #ff5722" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                        <div class="skill-name">
-                            <h5 class="roboto">HTML</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <!-- Skill Bars -->
-                    <div class="super text-center">
-                        <div style="padding-bottom: 5px;">
-                            <img src="../images/logo/html5.png" style="height: 10vh; height: 5vw;" />
-                        </div>
-                        <div class="progress skill-bar" >
-                            <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
-                            <div class="progress-bar" style="background-color: #ff5722" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                        <div class="skill-name">
-                            <h5 class="roboto">HTML</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2">
-                    <!-- Skill Bars -->
-                    <div class="super text-center">
-                        <div style="padding-bottom: 5px;">
-                            <img src="../images/logo/css31600.png" style="height: 10vh; height: 5vw;" />
-                        </div>
-                        <div class="progress skill-bar" >
-                            <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
-                            <div class="progress-bar" style="background-color: #2196f3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                            </div>
-                        </div>
-                        <div class="skill-name">
-                            <h5 class="roboto">HTML</h5>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!--<div class="slide">Section 2 Slide 1</div>-->
-            <!--<div class="slide">Section 2 Slide 2</div>-->
-            <!--<div class="slide">Section 2 Slide 3</div>-->
+            <div class="hidden-lg hidden-md" style="background-color: #212121">
+                <div class="slide roboto" style="color:white;">
+
+                </div>
+                <div class="slide" style="color:white;">Section 2 Slide 2</div>
+                <div class="slide" style="color:white;">Section 2 Slide 3</div>
+            </div>
         </div>
+
         <div class="section" style="background-color: #b92c28">Section 3</div>
     </div>
 </div>
