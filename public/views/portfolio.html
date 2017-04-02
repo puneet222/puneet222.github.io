@@ -92,7 +92,7 @@
                 <div class="row" id="skills">
                     <div class="col-lg-2 col-md-2" ng-repeat="skills in skillsMetadata">
                         <!-- Skill Bars -->
-                        <div class="super text-center">
+                        <div class="text-center">
                             <div style="padding-bottom: 5px;">
                                 <img src='{{ skills.image }}' style="height: 10vh; height: 5vw;" />
                             </div>
@@ -111,10 +111,70 @@
 
             <div class="hidden-lg hidden-md" style="background-color: #212121">
                 <div class="slide roboto" style="color:white;">
-
+                    <div class="row" style="padding: 10vw;">
+                        <div class="col-sm-6 col-xs-6" ng-repeat="skills in skills_1">
+                            <div class="text-center">
+                                <div style="padding-bottom: 5px;">
+                                    <img src='{{ skills.image }}' style="height: {{ skills.size + 'vh'}};" />
+                                </div>
+                                <div class="progress skill-bar" style=" margin-bottom: 0;">
+                                    <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
+                                    <div class="progress-bar" style="background-color: {{ skills.color }} ;" role="progressbar" aria-valuenow='{{ skills.knowledge }}' aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                                <div class="skill-name">
+                                    <h5 class="roboto" style="color:white">{{ skills.skill }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="slide" style="color:white;">Section 2 Slide 2</div>
-                <div class="slide" style="color:white;">Section 2 Slide 3</div>
+                <div class="slide" style="color:white;">
+                    <div class="row" style="padding: 10vw;">
+                        <div class="col-sm-6 col-xs-6" ng-repeat="skills in skills_2">
+                            <div class="text-center">
+                                <div style="padding-bottom: 5px;">
+                                    <img src='{{ skills.image }}' style="height: {{ skills.size + 'vh'}};" />
+                                </div>
+                                <div class="progress skill-bar" style=" margin-bottom: 0;">
+                                    <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
+                                    <div class="progress-bar" style="background-color: {{ skills.color }} ;" role="progressbar" aria-valuenow='{{ skills.knowledge }}' aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                                <div class="skill-name">
+                                    <h5 class="roboto" style="color:white">{{ skills.skill }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" style="color:white;">
+                    <div class="row" style="padding: 10vw;">
+                        <div class="col-sm-6 col-xs-6" ng-repeat="skills in skills_3">
+                            <div class="text-center">
+                                <div style="padding-bottom: 5px;">
+                                    <img src='{{ skills.image }}' style="height: {{ skills.size + 'vh'}};" />
+                                </div>
+                                <div class="progress skill-bar" style=" margin-bottom: 0;">
+                                    <!--style="-webkit-box-shadow:0 0 20px blue; -moz-box-shadow: 0 0 20px blue; box-shadow:0 0 20px blue;" >-->
+                                    <div class="progress-bar" style="background-color: {{ skills.color }} ;" role="progressbar" aria-valuenow='{{ skills.knowledge }}' aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                                <div class="skill-name">
+                                    <h5 class="roboto" style="color:white">{{ skills.skill }}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide roboto" style="color:white;">
+                    <h4 class="text-center">And also worked on...</h4>
+                    <div class="row" style="padding: 2vh 8vh 2vh 8vh;" ng-repeat="skills in extra">
+                        <div class="col-sm-12 col-xs-12">
+                            <button class="btn btn-primary extra" style="width: 100%; background-color: {{ skills.background }}; border: 0;"><span class="pull-left"><img src="{{ skills.image }}" style="height: 5vh"></span> <span style="font-size: 3vh; font-weight: 300">{{ skills.skill }}</span></button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

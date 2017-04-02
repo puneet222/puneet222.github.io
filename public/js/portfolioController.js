@@ -163,22 +163,144 @@ angular.module('portfolio').controller('portfolioController' , function ($scope)
                 "color" : $scope.skillsColors.blue,
                 "size" : 6,
                 "image" : "../images/logo/r.png"
-            },
+            }
+
+        ];
+
+        $scope.skills_1 = [
             {
                 "skill" : "HTML",
                 "knowledge" : 85,
-                "color" : $scope.skillsColors.blue,
-                "size" : 6,
+                "color" : $scope.skillsColors.red,
+                "size" : 12,
                 "image" : "../images/logo/html5.png"
             },
             {
-                "skill" : "HTML",
-                "knowledge" : 85,
+                "skill" : "CSS",
+                "knowledge" : 68,
                 "color" : $scope.skillsColors.blue,
-                "size" : 6,
-                "image" : "../images/logo/html5.png"
+                "size" : 12,
+                "image" : "../images/logo/css.png"
+            },
+            {
+                "skill" : "JAVASCRIPT",
+                "knowledge" : 88,
+                "color" : $scope.skillsColors.amber,
+                "size" : 12,
+                "image" : "../images/logo/javascript.png"
+            },
+            {
+                "skill" : "ANGULAR.JS",
+                "knowledge" : 85,
+                "color" : $scope.skillsColors.red,
+                "size" : 12,
+                "image" : "../images/logo/angular.png"
+            },
+            {
+                "skill" : "NODE.JS",
+                "knowledge" : 82,
+                "color" : $scope.skillsColors.green,
+                "size" : 12,
+                "image" : "../images/logo/node.png"
+            },
+            {
+                "skill" : "JQUERY",
+                "knowledge" : 85,
+                "color" : $scope.skillsColors.lightBlue,
+                "size" : 12,
+                "image" : "../images/logo/jquery.png"
             }
         ];
+
+        $scope.skills_2 = [
+            {
+                "skill" : "C++",
+                "knowledge" : 75,
+                "color" : $scope.skillsColors.indigo,
+                "size" : 12,
+                "image" : "../images/logo/cpp.png"
+            },
+            {
+                "skill" : "C",
+                "knowledge" : 88,
+                "color" : $scope.skillsColors.blueGrey,
+                "size" : 12,
+                "image" : "../images/logo/c.png"
+            },
+            {
+                "skill" : "JAVA",
+                "knowledge" : 65,
+                "color" : $scope.skillsColors.deepOrange,
+                "size" : 12,
+                "image" : "../images/logo/java.png"
+            },
+            {
+                "skill" : "AJAX",
+                "knowledge" : 80,
+                "color" : $scope.skillsColors.blue,
+                "size" : 12,
+                "image" : "../images/logo/ajax.png"
+            },
+            {
+                "skill" : "GIT",
+                "knowledge" : 75,
+                "color" : $scope.skillsColors.red,
+                "size" : 12,
+                "image" : "../images/logo/git.png"
+            },
+            {
+                "skill" : "BOOTSTRAP",
+                "knowledge" : 90,
+                "color" : $scope.skillsColors.purple,
+                "size" : 12,
+                "image" : "../images/logo/bootstrap.png"
+            }
+        ];
+
+        $scope.skills_3 = [
+            {
+                "skill" : "MONGODB",
+                "knowledge" : 85,
+                "color" : $scope.skillsColors.green,
+                "size" : 12,
+                "image" : "../images/logo/mongo.png"
+            },
+            {
+                "skill" : "SQL",
+                "knowledge" : 78,
+                "color" : $scope.skillsColors.orange,
+                "size" : 12,
+                "image" : "../images/logo/mysql.png"
+            }
+        ];
+
+        $scope.extra = [
+            {
+                "skill" : "PYTHON",
+                "knowledge" : 65,
+                "color" : $scope.skillsColors.yellow,
+                "background" : $scope.skillsColors.red,
+                "size" : 6,
+                "image" : "../images/logo/python.png"
+            },
+            {
+                "skill" : "KONG",
+                "knowledge" : 85,
+                "color" : $scope.skillsColors.indigo,
+                "background" : $scope.skillsColors.indigo,
+                "size" : 6,
+                "image" : "../images/logo/kong.png"
+            },
+            {
+                "skill" : "R",
+                "knowledge" : 65,
+                "color" : $scope.skillsColors.blue,
+                "background" : $scope.skillsColors.deepOrange,
+                "size" : 6,
+                "image" : "../images/logo/r.png"
+            }
+        ];
+
 
         console.log($scope.skillsMetadata) ;
 

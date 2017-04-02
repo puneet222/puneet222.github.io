@@ -1,33 +1,8 @@
 <!DOCTYPE html>
 <html  ng-app="portfolio" class="no-js">
 <head>
-	<script type="text/javascript">
-        window.onload = function() {
-            // Animate loader off screen
-			$(document).ready(function () {
-                $('#fullpage').fullpage({
-                    onLeave: function(index, nextIndex, direction){
-                        var leavingSection = $(this);
-                        console.log(leavingSection) ;
-                        //after leaving section 2
-                        if(nextIndex == 2){
-                            $('.progress .progress-bar').css("width",
-                                function() {
-                                    return $(this).attr("aria-valuenow") + "%";
-                                }
-                            )
-                        }
-                    }
-                });
-                $(".se-pre-con").fadeOut("slow" , function(){
-                    $("#heading").addClass("animated slideInUp text-center" , 2500) ;
-                    $("#headName").addClass("sliding-middle-out") ;
-                });
-            });
 
-        };
-	</script>
-	<meta name="theme-color" content="#db5945">
+	<meta name="theme-color" content="#e74c3c">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,6 +32,15 @@
 	<script src="../../bower_components/angular-route/angular-route.min.js"></script>
 	<script src="../../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
+	<!-- -------------------------------  some important scripts  ------------------------- -->
+
+	<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<srcipt src="../../bower_components/progressbar.js/dist/progressbar.js"></srcipt>
+	<script src="../../bower_components/bootstrap-progressbar/bootstrap-progressbar.js"></script>
+	<script src="../../bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
+	<script src="../../bower_components/fullpage.js/jquery.fullPage.min.js" onload="afterLoad();"></script>
+
 
 
 
@@ -84,14 +68,47 @@
 	</div>
 	<div ui-view></div>
 
-	<!-- -------------------------------  some important scripts  ------------------------- -->
-
-	<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-	<srcipt src="../../bower_components/progressbar.js/dist/progressbar.js"></srcipt>
-	<script src="../../bower_components/bootstrap-progressbar/bootstrap-progressbar.js"></script>
-	<script src="../../bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
-	<script src="../../bower_components/fullpage.js/jquery.fullPage.min.js"></script>
 
 </body>
+<script type="text/javascript">
+    window.onload = function() {
+        function changeThemeColor(color) {
+            var metaThemeColor = document.querySelector("meta[name=theme-color]");
+            metaThemeColor.setAttribute("content", color);
+        }
+        // Animate loader off screen
+        $(document).ready(function () {
+            $(".extra").hide() ;
+            $('#fullpage').fullpage({
+                onLeave: function(index, nextIndex, direction){
+                    var leavingSection = $(this);
+                    console.log(leavingSection) ;
+                    //after leaving section 2
+                    if(nextIndex == 2){
+                        changeThemeColor("#000000") ;
+                        $('.progress .progress-bar').css("width",
+                            function() {
+                                return $(this).attr("aria-valuenow") + "%";
+                            }
+                        )
+                    }
+                },
+                onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex){
+                    var leavingSlide = $(this);
+                    if(index == 2 && nextSlideIndex == 3 && direction == 'right'){
+//                            $(".extra").removeClass("animated slideInLeft text-center") ;
+                        $(".extra").addClass("animated slideInLeft text-center",500) ;
+                        $(".extra").show("slow") ;
+                    }
+                }
+            });
+                $(".se-pre-con").fadeOut("slow" , function(){
+                    changeThemeColor("#212121") ;
+                    $("#heading").addClass("animated slideInUp text-center", 2500) ;
+                    $("#headName").addClass("sliding-middle-out") ;
+                });
+        });
+
+    };
+</script>
 </html>
