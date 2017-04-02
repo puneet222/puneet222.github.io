@@ -24,7 +24,7 @@
 }
 
 .tint {
-	background: rgba(0,0,0,0.8);
+	background: rgba(0,0,0,0.6);
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -204,7 +204,7 @@
 	transition: width .5s ease, background-color .5s ease;
 }
 .sliding-middle-out:hover:after {
-	width: 100%;
+	width: 17%;
 	background: white;
 }
 
