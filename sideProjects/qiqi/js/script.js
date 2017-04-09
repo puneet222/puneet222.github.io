@@ -9,7 +9,7 @@ $(document).ready(function() {
       buttonColor : ""
     },
     warmUp : {
-      backgroundColor : "",
+      backgroundColor : "#FF6F00",
       buttonColor : ""
     },
     ready : {
@@ -35,30 +35,40 @@ $(document).ready(function() {
     $("#ready").css({backgroundColor : "transparent" , color : "white"});
     $("#on").css({backgroundColor : "transparent" , color : "white"});
     $("#standBy").css({backgroundColor : "transparent" , color : "white"});
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", stateColorObject.default.backgroundColor);
   }
 
   function warmUpState(){
     defaultState();
     $("html body").addClass("warmUpBackground" , "slow");
-    $("#warmUp").css({backgroundColor : "#FF6F00" , color : "white"});
+    $("#warmUp").css({backgroundColor : stateColorObject.standBy.backgroundColor , color : "white"});
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", stateColorObject.standBy.backgroundColor);
   }
 
   function standByState(){
     defaultState();
     $("html body").addClass("standByBackground" , "slow");
-    $("#standBy").css({backgroundColor : stateColorObject.standBy.backgroundColor , color : "white"})
+    $("#standBy").css({backgroundColor : stateColorObject.standBy.backgroundColor , color : "white"});
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", stateColorObject.standBy.backgroundColor);
   }
 
   function onState(){
     defaultState();
     $("html body").addClass("onBackground" , "slow");
-    $("#on").css({backgroundColor : stateColorObject.on.backgroundColor , color : "white"})
+    $("#on").css({backgroundColor : stateColorObject.on.backgroundColor , color : "white"});
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", stateColorObject.on.backgroundColor);
   }
 
   function readyState(){
     defaultState();
     $("html body").addClass("readyBackground" , "slow");
-    $("#ready").css({backgroundColor : stateColorObject.ready.backgroundColor , color : "white"})
+    $("#ready").css({backgroundColor : stateColorObject.ready.backgroundColor , color : "white"});
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
+    metaThemeColor.setAttribute("content", stateColorObject.ready.backgroundColor);
   }
 
 
