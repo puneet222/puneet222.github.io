@@ -9,7 +9,7 @@ $(document).ready(function() {
       buttonColor : ""
     },
     warmUp : {
-      backgroundColor : "#FF6F00",
+      backgroundColor : "#FFC107",
       buttonColor : ""
     },
     ready : {
