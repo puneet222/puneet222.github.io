@@ -41,8 +41,8 @@ $(document).ready(function() {
   function warmUpState(){
     defaultState();
     $("html body").addClass("warmUpBackground" , "slow");
-    $("#warmUp").css({backgroundColor : stateColorObject.standBy.backgroundColor , color : "white"});
-    $("meta[name='theme-color']").attr('content', stateColorObject.standBy.backgroundColor);
+    $("#warmUp").css({backgroundColor : stateColorObject.warmUp.backgroundColor , color : "white"});
+    $("meta[name='theme-color']").attr('content', stateColorObject.warmUp.backgroundColor);
   }
 
   function standByState(){
