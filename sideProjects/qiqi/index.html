@@ -1,0 +1,81 @@
+<html>
+<head>
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+  <script src="js/script.js"></script>
+</head>
+<body>
+<div class="main-div">
+  <div class="pull-left" id="setting">
+    <img src="images/settings.png" class="img-responsive" style="position : absolute; top: 3em; left: 3em; height: 5em; width : 5em;" />
+  </div>
+  <div class="text-center" id="logo">
+    <img src="images/QiQiLogo.png" class="img-responsive">
+  </div>
+  <div class="row">
+    <div id="power" class="text-center">
+      <div class="checkbox switcher">
+        <label for="test3">
+          <small><i class="fa fa-shower" aria-hidden="true" style="color: white; font-size: 7vw; padding-right: 3vw;"></i></small>
+          <input type="checkbox" id="test3" value="">
+          <span><small></small></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row">
+    <div class="text-center">
+      <h3 class="text-center" style="color:white; font-weight:100;font-family:'Roboto';font-size:20vw;">17&deg;C</h3>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row text-center" style="width: 80%;margin : 0 auto;">
+    <form style="color: white">
+    <fieldset>
+      <legend align="center" style="color: white;font-family: 'Roboto'; font-size: 6vw;font-weight:100;">Status</legend>
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-6 col-lg-3 text-center" style="padding-bottom:2em;">
+          <button class="btn" type="button" id="standBy"><span style="font-size:3em;">Stand By</span></button>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6 col-lg-3 text-center" style="padding-bottom:2em;">
+          <button class="btn" type="button" id="warmUp"><span style="font-size:3em;">Warm Up</span></button>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6 col-lg-3 text-center" style="padding-bottom:2em;">
+          <button class="btn" type="button" id="ready"><span style="font-size:3em;">Ready</span></button>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6 col-lg-3 text-center" style="padding-bottom:2em;">
+          <button class="btn" type="button" id="on"><span style="font-size:3em;">On</span></button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="row" style="border: 1px solid white;border-radius:5px;width:90%;margin : 0 auto;">
+    <h5 class="text-center" style="color: white; font-size:3em; font-family: 'Roboto';padding:0.5em;font-weight:100;">Notifications</h5>
+    <h4 class="text-center text-green" style="color:green; font-family:'Roboto'; font-size : 5vw;padding:0.5em;"><span class="statusIcon"><i class="fa fa-check" aria-hidden="true"></i></span>  Everything Working Fine</h4>
+  </div>
+
+  <div>
+    <button  id="exit" class="pull-right btn btn-danger" style="position: absolute; bottom: 1em; right: 1em; height:7em; width:23em;"><span style="font-family: 'Roboto'; font-size: 4em;">Exit   <i class="fa fa-sign-out" aria-hidden="true"></i></span></button>
+  </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
