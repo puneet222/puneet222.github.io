@@ -35,16 +35,14 @@ $(document).ready(function() {
     $("#ready").css({backgroundColor : "transparent" , color : "white"});
     $("#on").css({backgroundColor : "transparent" , color : "white"});
     $("#standBy").css({backgroundColor : "transparent" , color : "white"});
-    var metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", "#red");
+    $("meta[name='theme-color']").attr('content', '#455A64');
   }
 
   function warmUpState(){
     defaultState();
     $("html body").addClass("warmUpBackground" , "slow");
     $("#warmUp").css({backgroundColor : stateColorObject.standBy.backgroundColor , color : "white"});
-    var metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", stateColorObject.standBy.backgroundColor);
+    $("meta[name='theme-color']").attr('content', stateColorObject.standBy.backgroundColor);
   }
 
   function standByState(){
