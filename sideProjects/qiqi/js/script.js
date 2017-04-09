@@ -36,7 +36,7 @@ $(document).ready(function() {
     $("#on").css({backgroundColor : "transparent" , color : "white"});
     $("#standBy").css({backgroundColor : "transparent" , color : "white"});
     var metaThemeColor = document.querySelector("meta[name=theme-color]");
-    metaThemeColor.setAttribute("content", stateColorObject.default.backgroundColor);
+    metaThemeColor.setAttribute("content", "#red");
   }
 
   function warmUpState(){
