@@ -53,15 +53,15 @@ body{
 #on {
   height:7em;
   width:20em;
-    color:#56ab2f;
+    color:#FF3D00;
   background:transparent;
-  border:2px solid #56ab2f;
+  border:2px solid #FF3D00;
   border-radius:5em;
 }
 
 #on:hover{
   color: white;
-  background-color: #56ab2f;
+  background-color: #FF3D00;
 }
 
 #standBy {
