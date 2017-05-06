@@ -2,3 +2,6 @@ package.json
 node_modules
 app.js
 .idea
+prototype-3/client/node_modules
+prototype-3/client/build
+prototype-3/client/semantic
