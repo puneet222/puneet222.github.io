@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html  ng-app="portfolio" class="no-js">
+<head>
+
+	<meta name="theme-color" content="#e74c3c">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- -------------------------------   CSS frameworks   ------------------------------ -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Outline" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Codystar" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Wallpoet" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link href="../../bower_components/components-font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="../../bower_components/animate.css/animate.css" rel="stylesheet" />
+	<link href="../../bower_components/fullpage.js/jquery.fullPage.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/style.css">
+
+
+	<!-- -------------------------------   angular components   --------------------------- -->
+	<script src="../../bower_components/angular/angular.js"></script>
+	<script src="../../bower_components/angular-animate/angular-animate.js"></script>
+	<script src="../../bower_components/angular-route/angular-route.min.js"></script>
+	<script src="../../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+	<!-- -------------------------------  some important scripts  ------------------------- -->
+
+	<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<srcipt src="../../bower_components/progressbar.js/dist/progressbar.js"></srcipt>
+	<script src="../../bower_components/bootstrap-progressbar/bootstrap-progressbar.js"></script>
+	<script src="../../bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
+	<script src="../../bower_components/fullpage.js/jquery.fullPage.min.js" onload="afterLoad();"></script>
+
+
+
+
+	<!-- --------------------------------  MY scripts   ----------------------------------   -->
+	<script src="../js/adminApp.js"></script>
+	<script src="../js/portfolioController.js"></script>
+	<script src="../js/tempController.js"></script>
+
+
+	<title>Puneet Aggarwal</title>
+
+</head>
+<body>
+	<!-- --------------------------------------------------------------------------------  loader division --------------------------------------------------------- -->
+	<div class="se-pre-con" style="background-color: #e74c3c">
+		<div class="loader">
+			<span>{</span><span>}</span>
+		</div>
+	</div>
+
+	<div class="se-pre-con" id="loader2" style="background-color: #e74c3c">
+		<div class="loader">
+			<span>{</span><span>}</span>
+		</div>
+	</div>
+	<div ui-view></div>
+
+
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        function changeThemeColor(color) {
+            var metaThemeColor = document.querySelector("meta[name=theme-color]");
+            metaThemeColor.setAttribute("content", color);
+        }
+        // Animate loader off screen
+        $(document).ready(function () {
+            $(".extra").hide() ;
+            $('#fullpage').fullpage({
+                onLeave: function(index, nextIndex, direction){
+                    var leavingSection = $(this);
+                    console.log(leavingSection) ;
+                    //after leaving section 2
+                    if(nextIndex == 2){
+                        changeThemeColor("#000000") ;
+                        $('.progress .progress-bar').css("width",
+                            function() {
+                                return $(this).attr("aria-valuenow") + "%";
+                            }
+                        )
+                    }
+                },
+                onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex){
+                    var leavingSlide = $(this);
+                    if(index == 2 && nextSlideIndex == 3 && direction == 'right'){
+//                            $(".extra").removeClass("animated slideInLeft text-center") ;
+                        $(".extra").addClass("animated slideInLeft text-center",500) ;
+                        $(".extra").show("slow") ;
+                    }
+                }
+            });
+                $(".se-pre-con").fadeOut("slow" , function(){
+                    changeThemeColor("#212121") ;
+                    $("#heading").addClass("animated slideInUp text-center", 2500) ;
+                    $("#headName").addClass("sliding-middle-out") ;
+                });
+        });
+
+    };
+</script>
+</html>
