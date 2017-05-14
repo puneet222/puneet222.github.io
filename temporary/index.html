@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Puneet Aggarwal</title>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+ 	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+ 	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/typed.js"></script>
+	<style type="text/css">
+		body{
+			/*background-image: url("tt.jpg");
+			background-repeat: no-repeat;*/
+			/*background-color: #f44336 ;*/
+			align-content: center;
+		}
+		#cs{
+			text-align: center;
+			color : white;
+			font-family: 'Space Mono', monospace ;
+			font-size: 6em ;
+		}
+		.foo0 {
+        
+        -webkit-transition:background 1s;
+        -moz-transition:background 1s;
+        -o-transition:background 1s;
+        transition:background 1s;
+        background: #F44336;
+      }
+      .foo1 {
+        
+        -webkit-transition:background 1s;
+        -moz-transition:background 1s;
+        -o-transition:background 1s;
+        transition:background 1s;
+        background: #3E2723;
+      }
+      .foo2 {
+        
+        -webkit-transition:background 1s;
+        -moz-transition:background 1s;
+        -o-transition:background 1s;
+        transition:background 1s;
+        background: #64DD17;
+      }
+      .foo3 {
+        
+        -webkit-transition:background 1s;
+        -moz-transition:background 1s;
+        -o-transition:background 1s;
+        transition:background 1s;
+        background: #0091EA;
+      }
+      .foo4 {
+        
+        -webkit-transition:background 1s;
+        -moz-transition:background 1s;
+        -o-transition:background 1s;
+        transition:background 1s;
+        background: #03A9F4;
+      }
+      .foo5 {
+        
+        -webkit-transition:background 1s;
+        -moz-transition:background 1s;
+        -o-transition:background 1s;
+        transition:background 1s;
+        background: #4A148C;
+      }
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$("#cs").typed({
+			strings : ["Hang Tight" , "Coming ^500Very Soon..."] ,
+			typeSpeed : 200,
+			showCursor : false,
+			callback : function(){
+				
+			}
+		})
+			    var colselc = [
+        "#3F51B5",
+"#2196F3",
+"#F44336",
+"#FF1744",
+"#E91E63",
+"#9C27B0",
+"#4A148C",
+"#D500F9",
+"#AA00FF",
+"#673AB7",
+"#6200EA",
+"#304FFE",
+"#2196F3",
+"#2196F3",
+"#0D47A1",
+"#2962FF",
+"#03A9F4",
+"#0288D1",
+"#0091EA",
+"#00BCD4",
+"#009688",
+"#4CAF50",
+"#00E676",
+"#64DD17",
+"#AEEA00",
+"#FF5722",
+"#3E2723",
+"#212121"
+     ] ;
+
+     i = 0 ;
+			
+   			setInterval(function(){
+   				if(i == 6)
+   					i = 0 ;
+   				console.log(i) ;
+   				var t = "foo" + i ;
+   				console.log(t) ;
+   				$("body").addClass(t);
+ 				i++ ;
+   			} , 1000) ;
+		})
+	</script>
+</head>
+<body>
+<div id="cs">
+	
+</div>
+</body>
+</html>
